@@ -1,34 +1,73 @@
 body{
-    background-color: #0a0a23;
+    background-color: #161616;
 }
 
+#fullscreen{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+}
 #text {
-background-color: #0a0a23;
-color : #ffffff;
+background-color: #161616;
+color : #e9c9a6;
 padding: 10px;
+text-align: center;
+font-family: "Archivo Narrow", sans-serif;
+font-weight: 500;
+font-size: 1.1em;
+}
+
+h2 {
+    text-align: center;
+    color: #f70a1d;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-size: 1.7em;
 }
 
 #game{
-    max-width: 500px;
-    max-height: 400px;
-    background-color: #ffffff;
+    max-width: 800px;
+    max-height: auto;
+    background-color: #e9c9a6;
     color: #ffffff;
     margin: 30px auto 0px auto;
     padding: 10px;
 }
 
+
+#gamescreen img{
+    width: 100%;
+    height: auto;
+
+}
+
 #controls, #stats {
-    border: 1px solid #0a0a23;
     color: #0a0a23;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#stats{
+    padding: 5px 5px 15px 5px;
+    font-family: "Acme", sans-serif;
+}
+
+#controls{
+    padding: 10px;
 }
 
 #monsterStats{
     display: none;
-    border: 1px solid #0a0a23;
     color: #ffffff;
+    text-align: center;
     padding: 5px;
-    background-color: #c70d0d;
+    background-color: #cf1b39;
+    font-family: "Archivo Narrow", sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
 .stat{
@@ -38,6 +77,8 @@ padding: 10px;
 button {
     cursor: pointer;
     color: #0a0a23;
+    font-family: "Acme", sans-serif;
+    font-size: 1.1em;
     background-color: #feac32;
     background-image: linear-gradient(#fecc4c, #ffac33);
     border: 3px solid #feac32;

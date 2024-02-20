@@ -44,12 +44,12 @@ const weapons = [
 
 const monsters =[
     {
-    name : "slime",
+    name : "goblins",
     level: 2,
     health : 15 
     },
     {
-    name : "fanged beast",
+    name : "orcs",
     level: 8,
     health : 60 
     },
@@ -75,8 +75,8 @@ const locations = [
     },
     {
     name : "cave",
-    "button text" : ["Fight slime","Fight fanged beast","Go to town square"],
-    "button functions" : [fightSlime,fightBeast,goTown],
+    "button text" : ["Fight goblins","Fight orcs","Go to town square"],
+    "button functions" : [fightGoblins,fightOrcs,goTown],
     text : "You enter the cave. You see some monsters."
     },
     {
@@ -134,14 +134,17 @@ function update (location){
 
 function goTown(){
     update(locations[0]);
+    document.getElementById('screen').src = "img/town.png";
 }
 
 function goStore(){
     update(locations[1]);
+    document.getElementById('screen').src = "img/shop.png";
 }
 
 function goCave(){
     update(locations[2]);
+    document.getElementById('screen').src = "img/cave.png";
 }
 
 // Ce que je peux faire dans le Store -> ref : goStore
@@ -203,18 +206,21 @@ function goFight (){
 
 // Les 3 monstres. La valeur de fighting annonce à goFight, quoi renvoyer.
 
-function fightSlime(){
+function fightGoblins(){
     fighting = 0;
+    document.getElementById('screen').src = "img/goblins.png";
     goFight();
 }
 
-function fightBeast(){
+function fightOrcs(){
     fighting = 1;
+    document.getElementById('screen').src = "img/orc.png";
     goFight();
 }
 
 function fightDragon(){
     fighting = 2;
+    document.getElementById('screen').src = "img/dragon.png";
     goFight();
 }
 
@@ -247,6 +253,7 @@ function attack(){
     if (Math.random() <= .1 && inventory.length !== 1){
         text.innerText += " Your " + inventory.pop() + " breaks."
         currentWeapon --;
+        document.getElementById('screen').src = "img/break.png";
     }
 }
 
@@ -276,10 +283,12 @@ function defeatMonster(){
 
 function lose(){
     update(locations[5]);
+    document.getElementById('screen').src = "img/death.png";
 }
 
 function winGame(){
     update(locations[6]);
+    document.getElementById('screen').src = "img/win.png";
 }
 
 function restart(){

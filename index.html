@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Jacquarda+Bastarda+9&display=swap" rel="stylesheet">
     <title>RPG - Dragon Repeller</title>
 </head>
 <body>
+    <section id="fullscreen">
+    <div>
+    <h2>There is a dragon in my cave.<h2>
+    </div>
     <div id="game">
         <div id="stats">
             <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
             <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
             <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+        </div>
+        <div id="gamescreen">
+            <img id="screen" src="img/town.png" alt="">
         </div>
         <div id="controls">
             <button id="button1">Go to store</button>
@@ -23,9 +33,10 @@
             <span class="stat">Health: <strong><span id="monsterHealth"> </span></strong></span>
         </div>
         <div id="text">
-          <p>Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.</p>  
+          <p>Welcome adventurer ! <br> You dug too deep in your village's cave and the dragon woke up. You must defeat him and save your friends ! <br>You're in the town square, what do you want to do ?  </p>  
         </div>
     </div>
+</section>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
